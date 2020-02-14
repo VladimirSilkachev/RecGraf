@@ -33,7 +33,7 @@ def revers(lst):
       for i in lst:
             otpt.append(-1 * i)
             otpt.reverse()
-            return otpt
+      return otpt
 
 # функция, которая склеивает [набор повортов предыдущего дракона] + [поворто направо] + [набор поворотов в обратном направвлении]
 def dragon(n):
