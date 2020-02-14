@@ -24,9 +24,28 @@ def snow(order, n):
 def ice():
     pass
 
+long = 120
+num = 12
 
-def dragon():
-    pass
+# функция, которая возвращает набор поворотов для дракона, чтобы мы могли пройти в обратном напровлении
+def revers(lst):
+      otpt = []
+      for i in lst:
+            otpt.append(-1 * i)
+            otpt.reverse()
+            return otpt
+
+# функция, которая склеивает [набор повортов предыдущего дракона] + [поворто направо] + [набор поворотов в обратном направвлении]
+def dragon(n):
+            if n == 0:
+            return []
+      return dragon(n-1) + [1] + revers(dragon(n-1))
+
+# рисуем дракона по набору повортов
+t.forward(long / (num + 1))
+for i in dragon(num):
+      t.right(90*i)
+      t.forward(long / (num + 1))
 
 
 def tree(a):
